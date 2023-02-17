@@ -24,7 +24,7 @@ function App() {
       .get("https://api.github.com/users/" + userOrg)
       .then((res) => {
         console.log(res.data);
-        setUser(res.data.login)
+        setUser(res.data.login);
         setImageURL(res.data.avatar_url);
         setName(res.data.name);
         if (!res.data.bio) setBio("This profile has no bio");
@@ -68,7 +68,7 @@ function App() {
           <div>Name:{name}</div>
           <div>Username:{user}</div>
           <div>Bio:{bio}</div>
-        </div>  
+        </div>
         <div>Date of Joining:{doj}</div>
       </section>
       <section>
