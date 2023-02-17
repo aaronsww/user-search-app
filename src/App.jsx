@@ -52,49 +52,56 @@ function App() {
   }
 
   return (
-    <div>
-      <input
-        type="text"
-        value={userOrg}
-        onChange={(e) => setUserOrg(e.target.value)}
-      />
-      <button type="submit" onClick={performSearch}>
-        Search
-      </button>
+    <div className="flex flex-col items-center mt-40">
 
-      <img src={imageURL} alt="" />
-      <section>
+      <div className="m-5 border-2 border-rose-500 ">
+        <input
+          type="text"
+          value={userOrg}
+          onChange={(e) => setUserOrg(e.target.value)}
+        />
+        <button type="submit" onClick={performSearch}>
+          Search
+        </button>
+      </div>
+
+      <div className="flex border-2 border-rose-500 ">
+        <img className="rounded-full h-32" src={imageURL} alt="" />
         <div>
-          <div>Name:{name}</div>
-          <div>Username:{user}</div>
-          <div>Bio:{bio}</div>
+          <section className="flex">
+            <div>
+              <div className="text-2xl">{name}</div>
+              <div>@{user}</div>
+              <div>{bio}</div>
+            </div>
+            <div>Joined {doj}</div>
+          </section>
+          <section className="flex border-2 border-gray-500 justify-start p-2">
+            <span>
+              <div>Repos</div>
+              <div>{repos}</div>
+            </span>
+            <span className=" pl-16">
+              <div>Followers</div>
+              <div>{followers}</div>
+            </span>
+            <span className=" pl-16">
+              <div>Folowing</div>
+              <div>{following}</div>
+            </span>
+          </section>
+          <section className="flex justify-between">
+            <span>
+              <div>{location}</div>
+              <div>{blog}</div>
+            </span>
+            <span>
+              <div>{twitter}</div>
+              <div>{org}</div>
+            </span>
+          </section>
         </div>
-        <div>Date of Joining:{doj}</div>
-      </section>
-      <section>
-        <span>
-          <div>Repos</div>
-          <div>{repos}</div>
-        </span>
-        <span>
-          <div>Followers</div>
-          <div>{followers}</div>
-        </span>
-        <span>
-          <div>Folowing</div>
-          <div>{following}</div>
-        </span>
-      </section>
-      <section>
-        <span>
-          <div>Location:{location}</div>
-          <div>Twitter:{twitter}</div>
-        </span>
-        <span>
-          <div>Blog:{blog}</div>
-          <div>Organization:{org}</div>
-        </span>
-      </section>
+      </div>
     </div>
   );
 }
