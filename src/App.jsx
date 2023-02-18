@@ -52,52 +52,56 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col items-center mt-40">
-
-      <div className="m-5 border-2 border-rose-500 ">
+    <div className="flex flex-col items-center mt-28">
+      <div className="m-5 border-2 border-rose-500 p-2 rounded-2xl">
         <input
+          className="text-xl pr-9"
           type="text"
           value={userOrg}
           onChange={(e) => setUserOrg(e.target.value)}
         />
-        <button type="submit" onClick={performSearch}>
+        <button className="bg-slate-400 px-5 py-3 rounded-xl ml-80" type="submit" onClick={performSearch}>
           Search
         </button>
       </div>
 
-      <div className="flex border-2 border-rose-500 ">
-        <img className="rounded-full h-32" src={imageURL} alt="" />
+      <div className="flex border-2 border-rose-500 p-5 rounded-2xl">
+        <img
+          className="rounded-full h-28 m-5 border-2 border-rose-500"
+          src={imageURL}
+          alt=""
+        />
         <div>
-          <section className="flex">
+          <section className="flex justify-between">
             <div>
-              <div className="text-2xl">{name}</div>
-              <div>@{user}</div>
-              <div>{bio}</div>
+              <div className=" font-semibold text-2xl px-5 pt-5 pb-2">{name}</div>
+              <div className=" px-5">@{user}</div>
+              <div className="p-5">{bio}</div>
             </div>
-            <div>Joined {doj}</div>
+            <div className="ml-20 p-5 mt-1">Joined {doj}</div>
           </section>
-          <section className="flex border-2 border-gray-500 justify-start p-2">
+          <section className="flex border-2 rounded-xl  border-gray-500  px-7 py-3 mx-5">
             <span>
               <div>Repos</div>
-              <div>{repos}</div>
+              <div className="font-bold text-xl">{repos}</div>
             </span>
             <span className=" pl-16">
               <div>Followers</div>
-              <div>{followers}</div>
+              <div className="font-bold text-xl">{followers}</div>
             </span>
             <span className=" pl-16">
-              <div>Folowing</div>
-              <div>{following}</div>
+              <div>Following</div>
+              <div className="font-bold text-xl">{following}</div>
             </span>
           </section>
-          <section className="flex justify-between">
-            <span>
+          <section className="flex  ">
+            <span className="p-5">
               <div>{location}</div>
-              <div>{blog}</div>
+              <div className="pt-3">{blog}</div>
             </span>
-            <span>
+            <span className="p-5 ml-24">
               <div>{twitter}</div>
-              <div>{org}</div>
+              <div className="pt-3">{org}</div>
             </span>
           </section>
         </div>
