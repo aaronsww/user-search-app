@@ -53,14 +53,20 @@ function App() {
 
   return (
     <div className="flex flex-col items-center mt-28">
-      <div className="m-5 border-2 border-rose-500 p-2 rounded-2xl">
+      <div className="flex items-center m-5 border-2 border-rose-500 p-1 rounded-2xl">
+        <img className="h-6 mx-3" src="\img\search.png" alt="" />
         <input
-          className="text-xl pr-9"
+          className="text-lg mr-6"
+          placeholder="Search Github username..."
           type="text"
           value={userOrg}
           onChange={(e) => setUserOrg(e.target.value)}
         />
-        <button className="bg-slate-400 px-5 py-3 rounded-xl ml-80" type="submit" onClick={performSearch}>
+        <button
+          className="bg-slate-400 px-5 py-3 rounded-xl  ml-80"
+          type="submit"
+          onClick={performSearch}
+        >
           Search
         </button>
       </div>
@@ -74,7 +80,9 @@ function App() {
         <div>
           <section className="flex justify-between">
             <div>
-              <div className=" font-semibold text-2xl px-5 pt-5 pb-2">{name}</div>
+              <div className=" font-semibold text-2xl px-5 pt-5 pb-2">
+                {name}
+              </div>
               <div className=" px-5">@{user}</div>
               <div className="p-5">{bio}</div>
             </div>
