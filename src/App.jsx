@@ -72,11 +72,7 @@ function App() {
       </div>
 
       <div className="bg-primary flex  p-5 rounded-2xl">
-        <img
-          className="rounded-full h-28 m-5"
-          src={imageURL}
-          alt=""
-        />
+        <img className="rounded-full h-28 m-5" src={imageURL} alt="" />
         <div>
           <section className="flex justify-between">
             <div>
@@ -105,19 +101,35 @@ function App() {
           <section className="flex  ">
             <span className="p-5">
               <div className="flex">
-                <img className="h-5 pr-2" src="/img/location-on.svg" alt="location icon" />
-                {location}</div>
+                <img
+                  className="h-5 pr-2"
+                  src="/img/location-on.svg"
+                  alt="location icon"
+                />
+                {location}
+              </div>
               <div className="pt-3 flex">
                 <img className="h-5 pr-2" src="/img/link.svg" alt="link icon" />
-                {blog}</div>
+                {blog}
+              </div>
             </span>
             <span className="p-5 ml-24">
               <div className="flex">
-                 <img className="h-5 pr-2" src="/img/twitter.svg" alt="twitter icon" />
-                {twitter}</div>
+                <img
+                  className="h-5 pr-2"
+                  src="/img/twitter.svg"
+                  alt="twitter icon"
+                />
+                {twitter}
+              </div>
               <div className="pt-3 flex">
-                   <img className="h-5 pr-2" src="/img/building.svg" alt="building icon" />
-                {org}</div>
+                <img
+                  className="h-5 pr-2"
+                  src="/img/building.svg"
+                  alt="building icon"
+                />
+                {org}
+              </div>
             </span>
           </section>
         </div>
