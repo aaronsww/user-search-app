@@ -52,18 +52,18 @@ function App() {
   }
 
   return (
-    <div className="flex flex-col items-center mt-28">
-      <div className="flex items-center m-5 border-2 border-rose-500 p-1 rounded-2xl">
+    <div className="text-white flex flex-col items-center mt-28">
+      <div className="bg-primary flex items-center m-5 p-2 rounded-2xl">
         <img className="h-6 mx-3" src="\img\search.svg" alt="" />
         <input
-          className="text-lg mr-6"
+          className="bg-primary text-lg mr-6"
           placeholder="Search Github username..."
           type="text"
           value={userOrg}
           onChange={(e) => setUserOrg(e.target.value)}
         />
         <button
-          className="bg-slate-400 px-5 py-3 rounded-xl  ml-80"
+          className="bg-accent px-5 py-2 rounded-xl  ml-80"
           type="submit"
           onClick={performSearch}
         >
@@ -71,9 +71,9 @@ function App() {
         </button>
       </div>
 
-      <div className="flex border-2 border-rose-500 p-5 rounded-2xl">
+      <div className="bg-primary flex  p-5 rounded-2xl">
         <img
-          className="rounded-full h-28 m-5 border-2 border-rose-500"
+          className="rounded-full h-28 m-5"
           src={imageURL}
           alt=""
         />
@@ -83,39 +83,39 @@ function App() {
               <div className=" font-semibold text-2xl px-5 pt-5 pb-2">
                 {name}
               </div>
-              <div className=" px-5">@{user}</div>
-              <div className="p-5">{bio}</div>
+              <div className="text-accent px-5">@{user}</div>
+              <div className="text-gray-300 p-5">{bio}</div>
             </div>
             <div className="ml-20 p-5 mt-1">Joined {doj}</div>
           </section>
-          <section className="flex border-2 rounded-xl  border-gray-500  px-7 py-3 mx-5">
+          <section className="flex rounded-xl  px-7 py-3 mx-5 bg-secondary">
             <span>
-              <div>Repos</div>
+              <div className="text-gray-300">Repos</div>
               <div className="font-bold text-xl">{repos}</div>
             </span>
             <span className=" pl-16">
-              <div>Followers</div>
+              <div className="text-gray-300">Followers</div>
               <div className="font-bold text-xl">{followers}</div>
             </span>
             <span className=" pl-16">
-              <div>Following</div>
+              <div className="text-gray-300">Following</div>
               <div className="font-bold text-xl">{following}</div>
             </span>
           </section>
           <section className="flex  ">
             <span className="p-5">
-              <div className="bg-slate-500 flex">
+              <div className="flex">
                 <img className="h-5 pr-2" src="/img/location-on.svg" alt="location icon" />
                 {location}</div>
-              <div className="pt-3 bg-slate-500 flex">
+              <div className="pt-3 flex">
                 <img className="h-5 pr-2" src="/img/link.svg" alt="link icon" />
                 {blog}</div>
             </span>
             <span className="p-5 ml-24">
-              <div className="bg-slate-500 flex">
+              <div className="flex">
                  <img className="h-5 pr-2" src="/img/twitter.svg" alt="twitter icon" />
                 {twitter}</div>
-              <div className="pt-3 bg-slate-500 flex">
+              <div className="pt-3 flex">
                    <img className="h-5 pr-2" src="/img/building.svg" alt="building icon" />
                 {org}</div>
             </span>
