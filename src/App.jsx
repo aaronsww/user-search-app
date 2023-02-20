@@ -54,7 +54,7 @@ function App() {
   return (
     <div className="flex flex-col items-center mt-28">
       <div className="flex items-center m-5 border-2 border-rose-500 p-1 rounded-2xl">
-        <img className="h-6 mx-3" src="\img\search.png" alt="" />
+        <img className="h-6 mx-3" src="\img\search.svg" alt="" />
         <input
           className="text-lg mr-6"
           placeholder="Search Github username..."
@@ -104,12 +104,20 @@ function App() {
           </section>
           <section className="flex  ">
             <span className="p-5">
-              <div>{location}</div>
-              <div className="pt-3">{blog}</div>
+              <div className="bg-slate-500 flex">
+                <img className="h-5 pr-2" src="/img/location-on.svg" alt="location icon" />
+                {location}</div>
+              <div className="pt-3 bg-slate-500 flex">
+                <img className="h-5 pr-2" src="/img/link.svg" alt="link icon" />
+                {blog}</div>
             </span>
             <span className="p-5 ml-24">
-              <div>{twitter}</div>
-              <div className="pt-3">{org}</div>
+              <div className="bg-slate-500 flex">
+                 <img className="h-5 pr-2" src="/img/twitter.svg" alt="twitter icon" />
+                {twitter}</div>
+              <div className="pt-3 bg-slate-500 flex">
+                   <img className="h-5 pr-2" src="/img/building.svg" alt="building icon" />
+                {org}</div>
             </span>
           </section>
         </div>
