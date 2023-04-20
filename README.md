@@ -1,6 +1,6 @@
 # Github User Search App
 
-<a href="https://aaronsww.github.io/rpsGame/">Live Demonstartion.</a>
+<a href="https://user-search-app-ten.vercel.app/">Live Demonstartion.</a>
 
 ## Project Summary
 
@@ -13,9 +13,7 @@ This project implements the use of GitHub users API to pull profile data and dis
 
 ### In Action
 
-<img src="images/ss1.png" alt="">
-
- <img src="images/ss2 (2).png" alt="">
+<img src="img\Vite + React - Google Chrome 20-04-2023 10_33_09.png" alt="">
 
 ## Credits
 
